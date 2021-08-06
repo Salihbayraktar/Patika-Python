@@ -1,0 +1,4 @@
+SELECT maintable_DY6VO.GroupID, cb_vendorinformation.CompanyName, COUNT(*) AS Count FROM maintable_DY6VO
+INNER JOIN cb_vendorinformation ON maintable_DY6VO.GroupID = cb_vendorinformation.GroupID
+GROUP BY GroupID
+ORDER BY COUNT(*)

@@ -1,0 +1,5 @@
+SELECT ReportsTo, COUNT(ID) AS 'Members', CEILING(AVG(Age)) AS 'Average Age' FROM maintable_IUX07
+WHERE ReportsTo != 'null'
+GROUP BY ReportsTo
+ORDER BY ReportsTo
+

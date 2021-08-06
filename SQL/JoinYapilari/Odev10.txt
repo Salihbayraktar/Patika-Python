@@ -1,0 +1,13 @@
+--1. Soru
+SELECT city.city, country.country FROM city
+LEFT JOIN country ON country.country_id = city.country_id;
+
+
+--2. Soru
+SELECT payment.payment_id, customer.first_name, customer.last_name FROM customer
+RIGHT JOIN payment ON payment.customer_id = customer.customer_id;
+
+
+--3. Soru
+SELECT rental.rental_id, customer.first_name, customer.last_name FROM customer
+FULl JOIN rental ON rental.customer_id = customer.customer_id;

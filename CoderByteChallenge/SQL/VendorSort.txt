@@ -1,0 +1,5 @@
+SELECT maintable_CRYD0.GroupID, FirstName, LastName, Job, ExternalID, CompanyName, COUNT(FirstName) AS 'Count' FROM maintable_CRYD0
+INNER JOIN cb_vendorinformation ON maintable_CRYD0.GroupID  = cb_vendorinformation.GroupID
+GROUP BY FirstName
+ORDER BY COUNT(FirstName), CompanyName
+

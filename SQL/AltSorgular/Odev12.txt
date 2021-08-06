@@ -1,0 +1,33 @@
+--1. Soru
+SELECT COUNT(*) FROM film
+WHERE length >
+(
+SELECT AVG(length) FROM film
+);
+
+
+--2. Soru
+SELECT COUNT(*) FROM film
+WHERE rental_rate =
+(
+SELECT MAX(rental_rate) FROM film
+);
+
+
+--3. Soru
+SELECT * FROM film
+WHERE rental_rate =
+(
+SELECT MIN(rental_rate) FROM film
+)
+AND replacement_cost =
+(
+SELECT MIN(replacement_cost) FROM film
+);
+
+
+--4. Soru
+SELECT customer.first_name, customer.last_name, COUNT(payment.payment_id)  FROM payment
+INNER JOIN customer ON customer.customer_id = payment.customer_id
+GROUP BY customer.customer_id
+ORDER BY COUNT(payment.payment_id) DESC

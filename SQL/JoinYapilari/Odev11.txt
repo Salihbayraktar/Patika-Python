@@ -1,0 +1,32 @@
+--1. Soru
+SELECT first_name FROM actor
+UNION
+SELECT first_name FROM customer;
+
+
+--2. Soru
+SELECT first_name FROM actor
+INTERSECT
+SELECT first_name FROM customer;
+
+
+--3. Soru
+SELECT first_name FROM actor
+EXCEPT
+SELECT first_name FROM customer;
+
+
+--4. Soru
+--4.1
+SELECT first_name FROM actor
+UNION ALL
+SELECT first_name FROM customer;
+
+--4.2
+--Kesişim zaten tekrar eden verileri aldığı için ALL operatörü bu durum üzerinde herhangi bir değişiklik yapmaz.
+
+--4.3
+SELECT first_name FROM actor
+EXCEPT ALL
+SELECT first_name FROM customer;
+

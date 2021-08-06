@@ -1,0 +1,2 @@
+SELECT COUNT(*) FROM maintable_JDHSK
+WHERE FirstName LIKE '%e%' AND LENGTH(LastName) > 5
